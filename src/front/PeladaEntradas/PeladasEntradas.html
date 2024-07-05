@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+  <title>Peladin | Peladas entradas</title>
+</head>
+
+<body id="tela-principal">
+  <main id="tela-minhas-peladas">
+    <div class="barraPesquisa">
+      <div class="search-pelada">
+        <i id="searchIconPelada" class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInputPelada" placeholder="Pesquise nome ou endereço da pelada" onkeyup="search()">
+      </div>
+    </div>
+    <div class="pelada-header">
+      <div class="login-titulo">Participações em Peladas</div>
+    </div>
+    <div id="errorMessage" style="display:none;">
+      <div class='erro-nenhuma-pelada-encontrada'>
+        <div class='erro-nenhuma-pelada-encontrada-img'>
+          <img src='../assets/imagens/erro.svg'>
+        </div>
+        <br>
+        <div class='mensagem-erro'>IH! Não encontramos a pelada pesquisada</div>
+      </div>
+    </div>
+    <div id="pelada-info"></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/993326fe18.js" crossorigin="anonymous"></script>
+  <script src="PeladasEntradas.js" defer></script>
+  <script src="../assets/navbar.js" defer></script>
+</body>
+
+</html>

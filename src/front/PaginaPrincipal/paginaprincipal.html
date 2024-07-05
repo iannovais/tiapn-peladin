@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peladin</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body id="tela-principal">
+
+  <main id="tela-minhas-peladas">
+    <div class="container-botoes-principais">
+      <a href="../PeladasUsuario/PeladasUsuario.html" class="btn btn-outline-dark text-left">
+        <button>
+          <i class="bi bi-clipboard"></i> Minhas Peladas
+        </button>
+      </a>
+      <a href="../PeladaEntradas/PeladasEntradas.html" class="btn btn-outline-dark text-left">
+        <button type="button">
+          <i class="bi bi-calendar"></i> Próximas Peladas
+        </button>
+      </a>
+      <a href="../BuscaUsuario/BuscaUsuario.html" class="btn btn-outline-dark text-left">
+        <button>
+          <i class="bi bi-person"></i> Usuários
+        </button>
+      </a>
+      <a href="../QuadrasUsuario/quadrasusuario.html" class="btn btn-outline-dark text-left">
+        <button>
+          <i class="bi bi-grid"></i> Minhas Quadras
+        </button>
+      </a>
+    </div>
+    <div class="barraPesquisa">
+      <div class="search-pelada">
+        <i id="searchIconPelada" class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInputPelada" placeholder="Pesquise nome ou endereço da pelada" onkeyup="search()">
+      </div>
+    </div>
+    <div class="pelada-header">
+      <div class="login-titulo">Encontre Peladas</div>
+    </div>
+    <div id="errorMessage" style="display:none;">
+      <div class='erro-nenhuma-pelada-encontrada'>
+        <div class='erro-nenhuma-pelada-encontrada-img'>
+          <img src='../assets/imagens/erro.svg'>
+        </div>
+        <br>
+        <div class='mensagem-erro'>IH! Não encontramos a pelada pesquisada</div>
+      </div>
+    </div>
+    <div id="pelada-info"></div>
+    <section id="modal-edicao-concluida" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <i class="fa-regular fa-circle-check"></i>
+        <h2 id="titulo-modal-edicao">Entrou na pelada</h2>
+        <p>A entrada na pelada foi concluída com sucesso!</p>
+        <button id="fechar-modal-edicao" class="btn-fechar">Fechar</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/993326fe18.js" crossorigin="anonymous"></script>
+  <script src="paginaprincipal.js" defer></script>
+  <script src="../assets/navbar.js" defer></script>
+</body>
+
+</html>

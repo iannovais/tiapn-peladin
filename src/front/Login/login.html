@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+    <title>Peladin | Login</title>
+</head>
+
+<body id="tela-login">
+    <header id="header-inicial">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/imagens/Peladin transparente.png" alt=""></a>
+            </div>
+            <div class="login-button">
+                <ul>
+                    <li class="nav-item"><a href="" class="nav-link"> </a></li>
+                    <li class="nav-item"><button class=""><a href="../FAQ/faq.html">Dúvidas?</a></button></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../assets/imagens/menu.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="" class="nav-link"> </a></li>
+                <li class="nav-item"><a href="../FAQ/faq.html" class="nav-link">Dúvidas</a></li>
+            </ul>
+            <div class="login-button">
+                <button class=""><a href="login.html">Entre</a></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-login">
+        <form id="login-form" onsubmit="event.preventDefault(); login();">
+            <div class="form-login">
+                <div class="login-titulo">Entre</div>
+                <p id="senha-incorreta">Usuário e/ou senha incorretos. Tente novamente.
+                </p>
+                <div class="input">
+                    <input id="input-usuario" name="usuario" required>
+                    <label for="input-usuario">Usuário</label>
+                </div>
+                <div class="input">
+                    <input id="input-senha" name="senha" type="password" required>
+                    <label for="input-senha">Senha</label>
+                </div>
+                <button type="submit" class="login-botao-entrar">Entre</button>
+                <div class="container-redirecionamento">Ainda não possui conta?<a class="login-redirecionamento"
+                        href="../Registro/registro.html"> Cadastre-se</a></div>
+            </div>
+        </form>
+    </div>
+    <div class="container-imagem">
+        <div class="imagem-goleiro"><img src="../assets/imagens/imagem-login.svg"></div>
+    </div>
+
+    <script src="../assets/navbarpadrao.js"></script>
+    <script src="login.js"></script>
+
+</body>
+
+</html>

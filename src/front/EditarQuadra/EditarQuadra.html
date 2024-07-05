@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <title>Peladin | Editar quadra</title>
+</head>
+
+<body id="tela-cadastrar-quadra">
+
+    <main id="tela-cadastrar-quadra">
+        <div class="cointainer-cadastrar-quadra">
+            <div class="container-lado-esquerdo">
+                <div class="login-titulo" id="editar-informações-titulo-editar-quadra">Editar Quadra</div>
+                <div class="foto-quadra">
+                    <input id="input-foto" name="foto" type="file" accept="image/*" onchange="exibirImagem(event)">
+                    <label for="input-foto"><i class="bi bi-plus icone-adicionar"></i></label>
+                    <img id="preview-imagem" src="" alt="Preview da imagem" style="display: none;">
+                </div>
+                <div class="input">
+                    <input id="input-nome-quadra" name="nome-quadra" type="text">
+                    <label for="text">Nome da Quadra</label>
+                </div>
+            </div>
+
+            <div class="container-lado-direito">
+                <div id="telefone-error" style="color: red; text-align: center; display: none; margin-bottom: 10px;">O
+                    número de telefone não pode ter mais de 11 dígitos.</div>
+                <div id="endereco-error" style="color: red; text-align: center; display: none; margin-bottom: 10px;">O
+                    endereço deve ter pelo menos 8 caracteres.</div>
+                <div class="input">
+                    <input id="input-endereco" name="endereco">
+                    <label for="text">Endereço</label>
+                </div>
+                <div class="input">
+                    <input id="input-aluguel" name="aluguel" type="number">
+                    <label for="tel">Valor do Aluguel</label>
+                </div>
+                <div class="input">
+                    <input id="input-capacidade" name="capacidade" type="number">
+                    <label for="tel">Capacidade</label>
+                </div>
+                <div class="input">
+                    <input id="input-contato" name="contato" type="tel">
+                    <label for="tel">Telefone de contato</label>
+                </div>
+                <div class="input">
+                    <input id="input-descricao" name="descricao" type="text">
+                    <label for="text">Descrição</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="botao-enviar">
+            <button type="button" class="login-botao-entrar" id="botao-salvar-editar">Salvar</button>
+        </div>
+        <section id="modal-edicao-concluida" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <i class="fa-regular fa-circle-check"></i>
+                <h2 id="titulo-modal-edicao">Edição Concluída</h2>
+                <p>A edição da quadra foi concluída com sucesso!</p>
+                <button id="fechar-modal-edicao" class="btn-fechar">Fechar</button>
+            </div>
+        </section>
+        <section id="modal-erro-cadastro" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <i class="fa-regular fa-circle-xmark"></i>
+                <h2 id="titulo-modal-erro">Erro no Cadastro</h2>
+                <p>Ocorreu um erro ao tentar editar a quadra. Por favor, revise as informações inseridas.</p>
+                <button id="fechar-modal-erro" class="btn-fechar">Fechar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../assets/navbar.js"></script>
+    <script src="EditarQuadra.js"></script>
+</body>
+
+</html>

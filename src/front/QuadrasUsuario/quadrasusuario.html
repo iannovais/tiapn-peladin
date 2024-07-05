@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+  <title>Peladin | Minhas quadras</title>
+</head>
+
+<body id="tela-principal">
+
+  <main id="tela-minhas-quadras">
+    <div class="barraPesquisa">
+      <div class="search-quadra">
+        <i id="searchIconQuadra" class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInputQuadra" placeholder="Pesquise nome ou endereço da quadra" onkeyup="search()">
+      </div>
+    </div>
+    <div class="quadra-header">
+      <div class="login-titulo">Minhas quadras</div>
+      <div class="cadastrar-quadra"><a href="../CadastrarQuadra/CadastroQuadra.html">Cadastrar quadra <i
+            class="bi bi-chevron-right"></i></a></div>
+    </div>
+    <div id="errorMessage" style="display:none;">
+      <div class='erro-nenhuma-quadra-encontrada'>
+        <div class='erro-nenhuma-quadra-encontrada-img'>
+          <img src='../assets/imagens/erro.svg'>
+        </div>
+        <br>
+        <div class='mensagem-erro'>IH! Não encontramos a quadra pesquisada</div>
+      </div>
+    </div>
+    <div id="quadra-info"></div>
+  </main>
+
+  <div id="deleteQuadraModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p class="texto-modal">Tem certeza de que deseja excluir sua quadra?</p>
+      <p class="texto-modal-irreversivel">Essa ação não pode ser desfeita.</p>
+      <button id="confirmDeleteQuadraButton" class="confirm">Sim, quero excluir</button>
+      <button id="cancelDeleteQuadraButton" class="cancel">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/993326fe18.js" crossorigin="anonymous"></script>
+  <script src="quadrasusuario.js" defer></script>
+  <script src="../assets/navbar.js" defer></script>
+</body>
+
+</html>

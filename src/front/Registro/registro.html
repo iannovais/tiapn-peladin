@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <title>Peladin | Cadastro</title>
+</head>
+
+<body id="tela-login">
+    <header id="header-inicial">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/imagens/Peladin transparente.png" alt=""></a>
+            </div>
+            <div class="login-button">
+                <ul>
+                    <li class="nav-item"><a href="" class="nav-link"> </a></li>
+                    <li class="nav-item"><button class=""><a href="../FAQ/faq.html">Dúvidas?</a></button></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../assets/imagens/menu.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="" class="nav-link"> </a></li>
+                <li class="nav-item"><a href="../FAQ/faq.html" class="nav-link">Dúvidas</a></li>
+            </ul>
+            <div class="login-button">
+                <button class=""><a href="../Login/login.html">Entre</a></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-login">
+        <form id="formulario">
+            <div class="form-login" id="parte-1">
+                <div class="login-titulo">Cadastre-se</div>
+                <p id="erro-confirmar-senha">As senhas não coincidem.</p>
+                <div class="input">
+                    <input type="email" id="input-email" name="email" placeholder="" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input">
+                    <input id="input-senha" name="senha" type="password" required>
+                    <label for="password">Senha</label>
+                </div>
+                <div class="input">
+                    <input id="input-confirmar-senha" name="confirmacao-senha" type="password" required>
+                    <label for="password">Confirme a senha</label>
+                </div>
+                <button type="button" class="login-botao-entrar" onclick="mostrarForm('parte-2')">Continue</button>
+                <div class="container-redirecionamento">Já possui conta?<a class="login-redirecionamento"
+                        href="../Login/login.html"> Entre</a></div>
+            </div>
+
+            <div class="form-login" id="parte-2" style="display: none;">
+                <div class="login-titulo">Cadastre-se</div>
+                <p id="aviso-telefone" style="display: none; color: red;">O número de telefone não pode ter mais de 11 dígitos.</p>
+                <div class="input">
+                    <input id="input-nome" name="nome" required>
+                    <label for="text">Nome</label>
+                </div>
+                <div class="input">
+                    <input id="input-nascimento" name="nascimento" type="date" required>
+                    <label for="date">Data de nascimento</label>
+                </div>
+                <div class="input">
+                    <input id="input-telefone" name="telefone" type="tel" required>
+                    <label for="tel">Telefone</label>
+                </div>
+                <button type="button" class="login-botao-entrar" id="botao-voltar-cadastro"
+                    onclick="voltarForm('parte-1')">Voltar</button>
+                <button type="button" class="login-botao-entrar" onclick="mostrarForm('parte-3')">Continue</button>
+            </div>
+
+            <div class="form-login" id="parte-3" style="display: none">
+                <div class="login-titulo">Cadastre-se</div>
+                <h3 class="texto-foto">Foto</h3>
+
+                <div class="foto-jogador">
+                    <input id="input-foto" name="foto" type="file" accept="image/*" onchange="exibirImagem(event)">
+                    <label for="input-foto"><i class="bi bi-plus icone-adicionar"></i></label>
+                    <img id="preview-imagem" src="" alt="Preview da imagem" style="display: none;">
+                </div>
+                <div class="input">
+                    <input id="input-apelido" name="apelido" type="text" required>
+                    <label for="text">Apelido</label>
+                </div>
+                <div class="posicao">
+                    <input id="goleiro" name="posicao" type="radio" value="goleiro">
+                    <label for="goleiro">Goleiro</label>
+
+                    <input id="zagueiro" name="posicao" type="radio" value="zagueiro">
+                    <label for="zagueiro">Zagueiro</label>
+
+                    <input id="lateral" name="posicao" type="radio" value="lateral">
+                    <label for="lateral">Lateral</label>
+
+                    <input id="volante" name="posicao" type="radio" value="volante">
+                    <label for="volante">Volante</label>
+
+                    <input id="meio-campo" name="posicao" type="radio" value="meio-campo">
+                    <label for="meio-campo">Meio Campo</label>
+
+                    <input id="ponta" name="posicao" type="radio" value="ponta">
+                    <label for="ponta">Ponta</label>
+
+                    <input id="atacante" name="posicao" type="radio" value="atacante" required>
+                    <label for="atacante">Atacante</label>
+                </div>
+                <div class="checkbox">
+                    <input id="checkbox-login" type="checkbox" required>
+                    <label for="checkbox-login">Concordo com os <a href="">Termos e condições</a></label>
+                </div>
+                <button type="button" class="login-botao-entrar" id="botao-voltar-cadastro"
+                    onclick="voltarForm('parte-2')">Voltar</button>
+                <button type="button" class="login-botao-entrar" onclick="signup()">Cadastre</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-imagem">
+        <div class="imagem-goleiro"><img src="../assets/imagens/imagem-login.svg"></div>
+    </div>
+    <section id="modal-edicao-concluida" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <i class="fa-regular fa-circle-check"></i>
+            <h2 id="titulo-modal-edicao">Cadastro Concluído</h2>
+            <p>O seu cadastro foi concluído com sucesso!</p>
+            <button id="fechar-modal-edicao" class="btn-fechar">Fechar</button>
+        </div>
+    </section>
+    <section id="modal-erro-cadastro" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <i class="fa-regular fa-circle-xmark"></i>
+            <h2 id="titulo-modal-erro">Erro no Cadastro</h2>
+            <p>Ocorreu um erro ao tentar concluir o seu cadastro. Por favor, revise as informações inseridas.</p>
+            <button id="fechar-modal-erro" class="btn-fechar">Fechar</button>
+        </div>
+    </section>
+    
+    <script src="../assets/navbarpadrao.js"></script>
+    <script src="registro.js"></script>
+
+</body>
+
+</html>

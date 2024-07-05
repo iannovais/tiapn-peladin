@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+    <title>Peladin | Indicadores de Desempenho</title>
+</head>
+
+<body>
+    <header id="header-inicial">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="../PaginaPrincipal/paginaprincipal.html"><img src="../assets/imagens/Peladin transparente.png" alt=""></a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#indicador-participacoes-mes" class="nav-link">Média de Participações por Usuario</a></li>
+                    <li class="nav-item"><a href="#indicador-valor-quadras" class="nav-link">Valor das quadras</a></li>
+                    <li class="nav-item"><a href="#indicador-peladas-cadastradas" class="nav-link">Peladas cadastradas</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <ul>
+                    <li class="nav-item"><a class="nav-link"> </a></li>
+                    <div id="dropdown-container">
+                        <li class="nav-item" id="usernamenavDrop">
+                            <a class="usernamenav" href="#">Nome do Usuário</a>
+                            <div class="dropdown-deslogar" id="sairDropdown">
+                                <a id="botao-sair-nav" onclick="Deslogar()">Sair</a>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()">
+                    <img class="icon" src="../assets/imagens/menu.svg" alt="">
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#indicador-participacoes-mes" class="nav-link">Média de Participações por Usuario</a></li>
+                <li class="nav-item"><a href="#indicador-valor-quadras" class="nav-link">Valor das quadras</a></li>
+                <li class="nav-item"><a href="#indicador-peladas-cadastradas" class="nav-link">Peladas cadastradas</a></li>
+                <li class="nav-item"><a class="usernamenav" href="#">Nome do Usuário</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="tela-indicadores">
+        <div id="indicador-participacoes-mes">
+            <div class="indicadores-titulo">Média de Participações por Usuário por Mês</div>
+            <canvas id="mediaParticipacoesPorMesChart"></canvas>
+        </div>
+
+        <div id="indicador-valor-quadras">
+            <div class="indicadores-titulo">Valor médio das quadras</div>
+            <canvas id="graficoValorMedio"></canvas>
+        </div>
+
+        <div id="indicador-peladas-cadastradas">
+            <div class="indicadores-titulo">Peladas cadastradas</div>
+            <canvas id="peladasPorMesChart"></canvas>
+        </div>
+    </main>
+
+    <script src="../assets/navbarpadrao.js"></script>
+    <script src="indicadores.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

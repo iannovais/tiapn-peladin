@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <title>Peladin | Cadastro de pelada</title>
+</head>
+
+<body id="tela-cadastrar-quadra">
+
+    <main id="main-cadastrar-quadra">
+        <div id="parte-1" class="parte">
+            <div class="cointainer-cadastrar-quadra">
+                <div class="container-lado-esquerdo">
+                    <div class="login-titulo" id="editar-informações-titulo">Cadastrar Pelada</div>
+                    <div class="foto-quadra">
+                        <input id="input-foto" name="foto" type="file" accept="image/*" onchange="exibirImagem(event)">
+                        <label for="input-foto"><i class="bi bi-plus icone-adicionar"></i></label>
+                        <img id="preview-imagem" src="" alt="Preview da imagem" style="display: none;">
+                    </div>
+                    <div class="input">
+                        <input id="input-nome-pelada" name="nome-pelada" type="text" required>
+                        <label for="text">Nome da Pelada</label>
+                    </div>
+                </div>
+
+                <div class="container-lado-direito">
+                    <div class="input">
+                        <input id="input-descricao-pelada" name="descricao-pelada" type="text" required>
+                        <label for="text">Descrição da Pelada</label>
+                    </div>
+                    <div class="input">
+                        <input id="input-duracao-pelada" name="duracao-pelada" type="time">
+                        <label for="text">Duração da Pelada</label>
+                    </div>
+                    <div class="input">
+                        <input id="input-horario-pelada" name="horario-pelada" type="time">
+                        <label for="text">Horário da Pelada</label>
+                    </div>
+                    <div class="input">
+                        <input id="input-data-pelada" name="data-pelada" type="date" required>
+                        <label for="text">Data da Pelada</label>
+                    </div>
+                    <div class="input">
+                        <input id="input-valor-pelada" name="valor-pelada" type="number" step="0.01" required>
+                        <label for="text">Valor da Pelada</label>
+                    </div>
+                </div>
+            </div>
+            <div class="botao-enviar">
+                <button type="button" class="login-botao-entrar" onclick="mostrarForm('parte-2')">Continuar</button>
+            </div>
+        </div>
+        <div id="parte-2" class="parte hidden">
+            <div class="login-titulo" id="editar-informações-titulo">Selecione uma quadra</div>
+            <div id="quadra-info"></div>
+            <div class="botao-enviar">
+                <button type="button" class="login-botao-entrar" id="botao-voltar-cad-pelada"
+                    onclick="mostrarForm('parte-1')">Voltar</button>
+            </div>
+        </div>
+        <section id="modal-edicao-concluida" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <i class="fa-regular fa-circle-check"></i>
+                <h2 id="titulo-modal-edicao">Cadastro Concluído</h2>
+                <p>O cadastro da pelada foi concluído com sucesso!</p>
+                <button id="fechar-modal-edicao" class="btn-fechar">Fechar</button>
+            </div>
+        </section>
+        <section id="modal-erro-cadastro" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <i class="fa-regular fa-circle-xmark"></i>
+                <h2 id="titulo-modal-erro">Erro no Cadastro</h2>
+                <p>Ocorreu um erro ao tentar cadastrar a pelada. Por favor, revise as informações inseridas.</p>
+                <button id="fechar-modal-erro" class="btn-fechar">Fechar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../assets/navbar.js"></script>
+    <script src="CadastroPelada.js"></script>
+</body>
+
+</html>

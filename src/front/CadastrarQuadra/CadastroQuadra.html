@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <title>Peladin | Cadastro de quadra</title>
+</head>
+
+<body id="tela-cadastrar-quadra">
+
+    <main id="tela-cadastrar-quadra">
+        <form id="form-upload" action="upload.php" method="POST" enctype="multipart/form-data">
+            <div class="cointainer-cadastrar-quadra">
+                <div class="container-lado-esquerdo">
+                    <div class="login-titulo" id="editar-informações-titulo">Cadastrar Quadra</div>
+                    <div class="foto-quadra">
+                        <input id="input-foto" name="foto" type="file" accept="image/*" onchange="exibirImagem(event)">
+                        <label for="input-foto"><i class="bi bi-plus icone-adicionar"></i></label>
+                        <img id="preview-imagem" src="" alt="Preview da imagem" style="display: none;">
+                    </div>
+                    <div class="input">
+                        <input id="input-nome-quadra" name="nome-quadra" type="text" required>
+                        <label for="text">Nome da Quadra</label>
+                    </div>
+                </div>
+
+                <div class="container-lado-direito">
+                    <div id="telefone-error" style="color: red; display: none; margin-bottom: 10px;">O número de
+                        telefone não pode ter mais de 11 dígitos.</div>
+                    <div id="endereco-error" style="color: red; display: none; margin-bottom: 10px;">O endereço deve ter
+                        no mínimo 8 caracteres.</div>
+                    <div class="input">
+                        <input id="input-endereco" name="endereco" required>
+                        <label for="text">Endereço</label>
+                    </div>
+                    <div class="input">
+                        <input id="input-aluguel" name="aluguel" type="number" required>
+                        <label for="tel">Valor do Aluguel</label>
+                    </div>
+                    <div class="input">
+                        <input id="input-capacidade" name="capacidade" type="number" required>
+                        <label for="tel">Capacidade</label>
+                    </div>
+                    <div class="input">
+                        <input id="input-contato" name="contato" type="tel" required>
+                        <label for="tel">Telefone de contato</label>
+                    </div>
+                    <div class="input">
+                        <input id="input-descricao" name="descricao" type="text" required>
+                        <label for="text">Descrição</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="botao-enviar">
+                <button type="submit" class="login-botao-entrar" id="botao-salvar-editar">Salvar</button>
+            </div>
+        </form>
+    </main>
+    <section id="modal-edicao-concluida" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <i class="fa-regular fa-circle-check"></i>
+            <h2 id="titulo-modal-edicao">Cadastro Concluído</h2>
+            <p>O cadastro da quadra foi concluído com sucesso!</p>
+            <button id="fechar-modal-edicao" class="btn-fechar">Fechar</button>
+        </div>
+    </section>
+    <section id="modal-erro-cadastro" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <i class="fa-regular fa-circle-xmark"></i>
+            <h2 id="titulo-modal-erro">Erro no Cadastro</h2>
+            <p>Ocorreu um erro ao tentar cadastrar a quadra. Por favor, revise as informações inseridas.</p>
+            <button id="fechar-modal-erro" class="btn-fechar">Fechar</button>
+        </div>
+    </section>
+
+    <script src="../assets/navbar.js"></script>
+    <script src="CadastroQuadra.js"></script>
+</body>
+
+</html>

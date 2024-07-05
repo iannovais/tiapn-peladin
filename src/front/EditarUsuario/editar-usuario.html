@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <title>Peladin | Atualizar informações</title>
+</head>
+
+<body id="tela-editar-usuario">
+
+    <main id="tela-editar-usuario">
+        <div class="cointainer-editar-usuario">
+            <div class="container-lado-esquerdo">
+                <div class="login-titulo" id="editar-informações-titulo">Editar informações</div>
+                <div class="usuario-foto-jogador">
+                    <input id="input-foto" name="foto" type="file" accept="image/*" onchange="exibirImagem(event)">
+                    <label for="input-foto"><i class="bi bi-plus icone-adicionar"></i></label>
+                    <img id="preview-imagem" src="" alt="Preview da imagem" style="display: none;">
+                </div>
+                <div class="input">
+                    <input id="input-apelido" name="apelido" type="text">
+                    <label for="text">Apelido</label>
+                </div>
+            </div>
+
+            <div class="container-lado-direito">
+                <div id="telefone-error" style="color: red; text-align: center; display: none; margin-bottom: 11px;">O
+                    número de telefone não pode ter mais de 11 dígitos.</div>
+                <div class="input">
+                    <input id="input-nome" name="nome">
+                    <label for="text">Nome</label>
+                </div>
+                <div class="input">
+                    <input id="input-telefone" name="telefone" type="tel">
+                    <label for="tel">Telefone</label>
+                </div>
+                <div class="posicao" id="campo-posicoes">
+                    <input id="goleiro" name="posicao" type="radio" value="goleiro">
+                    <label for="goleiro">Goleiro</label>
+
+                    <input id="zagueiro" name="posicao" type="radio" value="zagueiro">
+                    <label for="zagueiro">Zagueiro</label>
+
+                    <input id="lateral" name="posicao" type="radio" value="lateral">
+                    <label for="lateral">Lateral</label>
+
+                    <input id="volante" name="posicao" type="radio" value="volante">
+                    <label for="volante">Volante</label>
+
+                    <input id="meio-campo" name="posicao" type="radio" value="meio-campo">
+                    <label for="meio-campo">Meio Campo</label>
+
+                    <input id="ponta" name="posicao" type="radio" value="ponta">
+                    <label for="ponta">Ponta</label>
+
+                    <input id="atacante" name="posicao" type="radio" value="atacante" required>
+                    <label for="atacante">Atacante</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="botao-enviar">
+            <button type="button" class="login-botao-entrar" id="botao-salvar-editar">Salvar</button>
+        </div>
+        <div id="confirmationModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p class="texto-modal">Tem certeza de que deseja editar suas informações?</p>
+                <p class="texto-modal-irreversivel">Você será redirecionado para a tela de login</p>
+                <button id="confirmDeleteButton" class="confirm">Sim, quero editar</button>
+                <button id="cancelDeleteButton" class="cancel">Cancelar</button>
+            </div>
+        </div>
+        <section id="modal-edicao-concluida" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <i class="fa-regular fa-circle-check"></i>
+                <h2 id="titulo-modal-edicao">Edição Concluída</h2>
+                <p>A edição de usuário foi concluída com sucesso!</p>
+                <button id="fechar-modal-edicao" class="btn-fechar">Fechar</button>
+            </div>
+        </section>
+        <section id="modal-erro-cadastro" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <i class="fa-regular fa-circle-xmark"></i>
+                <h2 id="titulo-modal-erro">Erro no Cadastro</h2>
+                <p>Ocorreu um erro ao tentar editar o usuário. Por favor, revise as informações inseridas.</p>
+                <button id="fechar-modal-erro" class="btn-fechar">Fechar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../assets/navbar.js"></script>
+    <script src="editar-usuario.js"></script>
+</body>
+
+</html>

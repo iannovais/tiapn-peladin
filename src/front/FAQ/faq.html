@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+    <title>Peladin | Perguntas frequentes</title>
+</head>
+
+<body id="tela-faq">
+    <header id="header-inicial">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/imagens/Peladin transparente.png" alt=""></a>
+            </div>
+            <div class="login-button">
+                <ul>
+                    <li class="nav-item"><a href="../FAQ/faq.html" class="nav-link">Dúvidas</a></li>
+                    <li class="nav-item"><button class=""><a href="../Login/login.html">Entre</a></button></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../assets/imagens/menu.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="../FAQ/faq.html" class="nav-link">Dúvidas</a></li>
+            </ul>
+            <div class="login-button">
+                <button class=""><a href="../Login/login.html">Entre</a></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-banner-ajuda">
+        <div class="imagem-banner-ajuda">
+            <img class="imagem-banner-ajuda" src="../assets/imagens/banner-ajuda.svg" alt="Banner de Ajuda">
+        </div>
+        <div class='ajuda-titulo'>
+            <div>Central de Ajuda</div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Pesquisar por palavra-chave" onkeyup="search()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-tela-faq">
+
+        <div class="faq-texto-inicial">
+            <div class="faq-titulo-texto-inicial">Precisa de assistência? Estamos aqui para ajudar.</div>
+            <div class="faq-descricao-texto-inicial">De configurações a jogar peladas. Oferecemos suporte completo para
+                todas as suas necessidades no Peladin.</div>
+        </div>
+
+        <p class="sistema">Sobre o sistema</p>
+
+        <div class="faq-list">
+            <div class="faq-item" id="question1" onclick="toggleAnswer(1)">
+                <h2>
+                    Como faço para criar uma conta?
+                    <i id="icon1" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer1" style="display: none">
+                    Para criar uma conta em nosso site, clique no botão "Cadastro" na página inicial. Você será
+                    direcionado para uma página onde poderá inserir suas informações pessoais, como nome, endereço de
+                    e-mail e senha. Após preencher os campos obrigatórios, clique em "Continue" para concluir o processo
+                    de registro.
+                </div>
+            </div>
+            <div class="faq-item" id="question2" onclick="toggleAnswer(2)">
+                <h2>
+                    Não consigo fazer login na minha conta. O que devo fazer?
+                    <i id="icon2" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer2" style="display: none">
+                    Se você estiver enfrentando problemas para fazer login em sua conta, verifique se está inserindo
+                    corretamente seu apelido e senha. Certifique-se de que a tecla "Caps Lock" não esteja
+                    ativada, pois as senhas diferenciam maiúsculas de minúsculas. Se ainda estiver tendo problemas,
+                    tente limpar o cache e os cookies do seu navegador ou tente fazer login em outro navegador. Se o
+                    problema persistir, entre em contato com nossa equipe de suporte para obter assistência adicional.
+                </div>
+            </div>
+            <div class="faq-item" id="question3" onclick="toggleAnswer(3)">
+                <h2>
+                    Posso fazer login em várias dispositivos ao mesmo tempo?
+                    <i id="icon3" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer3" style="display: none">
+                    Sim, você pode fazer login em sua conta em vários dispositivos ao mesmo tempo. No entanto, por
+                    motivos de segurança, recomendamos que você faça logout de sua conta em dispositivos públicos ou
+                    compartilhados após o uso.
+                </div>
+            </div>
+            <div class="faq-item" id="question4" onclick="toggleAnswer(4)">
+                <h2>
+                    Posso alterar minha senha, data de nascimento ou endereço de e-mail depois de criar a conta?
+                    <i id="icon4" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer4" style="display: none">
+                    No momento, não é possível alterar a senha, data de nascimento ou o endereço de e-mail associado à sua conta após a
+                    criação. Isso é feito por motivos de segurança e para garantir a integridade dos dados dos usuários.
+                    Se houver uma necessidade de alteração, entre em contato com nossa equipe de suporte para obter
+                    assistência adicional.
+                </div>
+            </div>
+            <div class="faq-item" id="question5" onclick="toggleAnswer(5)">
+                <h2>
+                    Quais são os requisitos de senha para criar uma conta?
+                    <i id="icon5" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer5" style="display: none">
+                    Para garantir a segurança das contas dos nossos usuários, exigimos que as senhas tenham no mínimo 8
+                    caracteres de comprimento. Além disso, recomendamos fortemente o uso de uma combinação de letras
+                    maiúsculas e minúsculas, números e caracteres especiais para criar uma senha robusta e difícil de
+                    ser adivinhada.
+                </div>
+            </div>
+            <div class="faq-item" id="question6" onclick="toggleAnswer(6)">
+                <h2>
+                    Posso fazer login usando o email ou é necessário acessar pelo apelido?
+                    <i id="icon6" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer6" style="display: none">
+                    Em nosso site, o login é feito exclusivamente através do seu apelido. Isso ajuda a
+                    garantir a segurança.
+                </div>
+            </div>
+            <div class="faq-item" id="question7" onclick="toggleAnswer(7)">
+                <h2>
+                    Como faço para cadastrar uma quadra no site?
+                    <i id="icon7" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer7" style="display: none">
+                    Abra o site e faça login na sua conta. No menu principal, selecione a opção "Cadastrar Quadra". 
+                    Preencha as informações necessárias, como nome da quadra, endereço e os detalhes. Faça o upload de 
+                    fotos da quadra para melhorar a visibilidade. Clique em "Salvar" para concluir o cadastro.
+                </div>
+            </div>
+            <div class="faq-item" id="question8" onclick="toggleAnswer(8)">
+                <h2>
+                    Quais informações são necessárias para cadastrar uma quadra?
+                    <i id="icon8" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer8" style="display: none">
+                    Você precisará fornecer o nome da quadra, recomendável uma foto da quadra, endereço completo, 
+                    descrições da quadra, recomendável especificar tipo de superfície (grama, concreto, areia, etc.),
+                     horários de funcionamento, preços de aluguel e telefone de contato para reservas.
+                </div>
+            </div>
+            <div class="faq-item" id="question9" onclick="toggleAnswer(9)">
+                <h2>
+                    Posso cadastrar mais de uma quadra?
+                    <i id="icon9" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer9" style="display: none">
+                    Sim, você pode cadastrar quantas quadras desejar. Para isso, basta repetir o processo 
+                    de cadastro para cada uma.
+                </div>
+            </div>
+            <div class="faq-item" id="question10" onclick="toggleAnswer(10)">
+                <h2>
+                    Há algum custo para cadastrar uma quadra?
+                    <i id="icon10" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer10" style="display: none">
+                    Não. O cadastro de quadras no aplicativo é gratuito. 
+                </div>
+            </div>
+            <div class="faq-item" id="question11" onclick="toggleAnswer(11)">
+                <h2>
+                    Quanto tempo leva para minha quadra aparecer no aplicativo após o cadastro?
+                    <i id="icon11" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer11" style="display: none">
+                    Normalmente, a quadra aparece no aplicativo imediatamente após o cadastro. Em alguns casos, 
+                    pode haver uma verificação de segurança que pode demorar até 24 horas. Se a quadra não 
+                    aparecer após este período, entre em contato com o suporte. 
+                </div>
+            </div>
+            <div class="faq-item" id="question12" onclick="toggleAnswer(12)">
+                <h2>
+                    Quanto tempo leva para minha quadra aparecer no aplicativo após o cadastro?
+                    <i id="icon12" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer12" style="display: none">
+                    Sim, se você não adicionar uma imagem, uma imagem padrão será utilizada. 
+                </div>
+            </div>
+            <div class="faq-item" id="question13" onclick="toggleAnswer(13)">
+                <h2>
+                    O que fazer se receber uma mensagem de erro ao tentar cadastrar a pelada?
+                    <i id="icon13" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer13" style="display: none">
+                    Se ocorrer um erro, verifique se todos os campos obrigatórios estão preenchidos corretamente, 
+                    certifique-se de que os valores numéricos, como valor da pelada, estão corretos e tente novamente após alguns minutos.
+                </div>
+            </div>
+            <div class="faq-item" id="question14" onclick="toggleAnswer(14)">
+                <h2>
+                    Como faço para adicionar uma imagem à pelada?
+                    <i id="icon14" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer14" style="display: none">
+                    Para adicionar uma imagem, clique no ícone de adicionar foto na seção de cadastro, selecione a 
+                    imagem desejada no seu dispositivo e a imagem selecionada será exibida como uma pré-visualização. 
+                </div>
+            </div>
+            <div class="faq-item" id="question15" onclick="toggleAnswer(15)">
+                <h2>
+                    Como eu posso cadastrar uma nova pelada?
+                    <i id="icon15" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer15" style="display: none">
+                    Para cadastrar uma nova pelada, siga os seguintes passos: acesse a tela de cadastro de pelada, preencha todos os campos 
+                    obrigatórios, incluindo Nome da Pelada, Descrição da Pelada, Duração da Pelada, Horário da Pelada, Valor da Pelada e a 
+                    seleção da Quadra. Faça o upload de uma imagem, se desejar, clicando no ícone de adicionar foto e, em seguida, clique no 
+                    botão "Salvar" para concluir o cadastro.
+                </div>
+            </div>
+            <div class="faq-item" id="question16" onclick="toggleAnswer(16)">
+                <h2>
+                    Como faço para avaliar os jogadores?
+                    <i id="icon16" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer16" style="display: none">
+                    Acesse a página de avaliação de participantes. Utilize a barra de pesquisa para encontrar o jogador que deseja avaliar. 
+                    Clique nas estrelas para dar a nota ao jogador.
+                </div>
+            </div>
+            <div class="faq-item" id="question17" onclick="toggleAnswer(17)">
+                <h2>
+                    Preciso avaliar todos os jogadores?
+                    <i id="icon17" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer17" style="display: none">
+                    Sim, é necessário avaliar todos os jogadores antes de enviar as avaliações.
+                </div>
+            </div>
+            <div class="faq-item" id="question18" onclick="toggleAnswer(18)">
+                <h2>
+                    Como as avaliações afetam as estatísticas dos jogadores?
+                    <i id="icon18" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer18" style="display: none">
+                    As avaliações são somadas à nota geral dos jogadores, aumentando o número total de avaliações. As estatísticas 
+                    de "Craque da Pelada" e "Bagre da Pelada" também são atualizadas com base nas avaliações.
+                </div>
+            </div>
+            <div class="faq-item" id="question19" onclick="toggleAnswer(19)">
+                <h2>
+                    Onde posso visualizar as estatísticas atualizadas?
+                    <i id="icon19" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer19" style="display: none">
+                    Após enviar as avaliações, você será redirecionado para a página de dados da partida, onde poderá ver as estatísticas atualizadas.
+                </div>
+            </div>
+            <div class="faq-item" id="question20" onclick="toggleAnswer(20)">
+                <h2>
+                    Quem pode ver minhas avaliações?
+                    <i id="icon20" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer20" style="display: none">
+                    As avaliações são anônimas e apenas contribuem para a estatística geral dos jogadores.
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </main>
+
+    <script src="faq.js"></script>
+    <script src="../assets/navbarpadrao.js"></script>
+    <script src="https://kit.fontawesome.com/993326fe18.js" crossorigin="anonymous"></script>
+</body>

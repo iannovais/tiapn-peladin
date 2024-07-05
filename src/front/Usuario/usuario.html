@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>Peladin | Usuário</title>
+</head>
+
+<body id="tela-login">
+
+    <main id="tela-usuario">
+        <div class="usuario-container-esquerdo">
+            <div class="usuario-elementos-usuario">
+                <div class="usuario-nome"></div>
+                <div class="usuario-imagem-user"></div>
+                <div class="editar-perfil">
+                    <a href="../EditarUsuario/editar-usuario.html" class="usuario-botoes"><i
+                            class="bi bi-pencil-fill"></i> Editar conta</a>
+                </div>
+                <div class="deletar-conta">
+                    <button id="deleteButton" class="usuario-botoes"><i class="bi bi-trash-fill"></i> Deletar
+                        conta</button>
+                </div>
+                <div id="confirmationModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <i class="fa-regular fa-circle-question"></i>
+                        <h2 class="texto-modal">Excluir sua conta</h2>
+                        <p>Tem certeza de que deseja excluir sua conta?<br>Lembre-se, esta ação é irreversível!</p>
+                        <button id="confirmDeleteButton" class="confirm">Sim, quero excluir</button>
+                        <button id="cancelDeleteButton" class="cancel">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="usuario-container-direito">
+            <div class="estatisticas-usuario">
+                <div class="stats">
+                    <div class="palavra-estatisticas">
+                        <p>ATA</p>
+                    </div>
+                    <div class="circulo-estatisticas">
+                        <span id="classificacao-ataque"></span>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="palavra-estatisticas">
+                        <p>DEF</p>
+                    </div>
+                    <div class="circulo-estatisticas">
+                        <span id="classificacao-defesa"></span>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="palavra-estatisticas">
+                        <p>FOR</p>
+                    </div>
+                    <div class="circulo-estatisticas">
+                        <span id="classificacao-forca"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="numeros-jogador">
+                <div class="numero-jogador">
+                    <h5 class="titulo-estatistica">Jogos</h5>
+                    <p class="numero-estatistica" id="numero-jogos"></p>
+                </div>
+                <div class="numero-jogador">
+                    <h5 class="titulo-estatistica">Gols</h5>
+                    <p class="numero-estatistica" id="numero-gols"></p>
+                </div>
+                <div class="numero-jogador">
+                    <h5 class="titulo-estatistica">Assist.</h5>
+                    <p class="numero-estatistica" id="numero-assistencias"></p>
+                </div>
+                <div class="numero-jogador">
+                    <h5 class="titulo-estatistica">Defesas</h5>
+                    <p class="numero-estatistica" id="numero-defesas"></p>
+                </div>
+            </div>
+            <div class="premios">
+                <div class="craque">
+                    <div class="titulo-craque">
+                        <img src="../assets/imagens/coroa.png" class="img-titulo">
+                        <p div="escrito-craque">Craque da pelada</p>
+                    </div>
+                    <div class="numero-craque">
+                        <h2 id="numero-craque"></h2>
+                    </div>
+                </div>
+                <div class="bagre">
+                    <div class="titulo-bagre">
+                        <img src="../assets/imagens/bagre.png" class="img-titulo">
+                        <p div="escrito-bagre"> Bagre da pelada</p>
+                    </div>
+                    <div class="numero-bagre">
+                        <h2 id="numero-bagre"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/navbar.js"></script>
+    <script src="usuario.js"></script>
+</body>
+
+</html>

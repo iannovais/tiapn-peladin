@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../assets/imagens/Logo principal com fundo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Peladin | Avaliar participações</title>
+</head>
+
+<body id="tela-principal">
+    
+    <main id="tela-busca-usuario">
+        <div class="barraPesquisa">
+            <div class="search-usuario">
+                <i id="searchIconUsuario" class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInputUsuario" placeholder="Pesquise nome do usuário" onkeyup="search()">
+            </div>
+        </div>
+        <div class="usuario-header">
+            <div class="login-titulo">Avaliar Participantes</div>
+        </div>
+        <div id="errorMessage" style="display:none;">
+            <div class='erro-nenhum-usuario-encontrado'>
+                <div class='erro-nenhum-usuario-encontrado-img'>
+                    <img src='../assets/imagens/erro.svg'>
+                </div>
+                <br>
+                <div class='mensagem-erro'>IH! Não encontramos usuários</div>
+            </div>
+        </div>
+        <div id="usuario-info"></div>
+        <button class="login-botao-entrar" id="sendRatingsButton">Enviar Avaliações</button>
+        <section id="modal-edicao-concluida" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <i class="fa-regular fa-circle-check"></i>
+                <h2 id="titulo-modal-edicao">Dados enviados</h2>
+                <p>A inserção de estatísticas foi concluída com sucesso!</p>
+                <button id="fechar-modal-edicao" class="btn-fechar">Fechar</button>
+            </div>
+        </section>
+        <section id="modal-erro-cadastro" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <i class="fa-regular fa-circle-xmark" id="fa-erro"></i>
+                <h2 id="titulo-modal-erro">Avaliação inválida</h2>
+                <p>Por favor, avalie todos jogadores</p>
+                <button id="fechar-modal-erro" class="btn-fechar">Fechar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/993326fe18.js" crossorigin="anonymous"></script>
+    <script src="AvaliarParticipacao.js" defer></script>
+    <script src="../assets/navbar.js" defer></script>
+</body>
+
+</html>
