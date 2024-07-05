@@ -1,0 +1,33 @@
+cff-version: 1.0.1
+title: PeladIn
+authors:
+  - family-names: Lage Silva
+    given-names: Gabriel 
+  - family-names: dos Reis Novais
+    given-names: Ian 
+  - family-names: Nascimento Pires
+    given-names: João Antônio
+  - family-names: Carvalho Domingos
+    given-names: João Vitor
+  - family-names: Carvalho Taveira de Souza
+    given-names: Marcos
+  - family-names: Nascimento Silva
+    given-names: Saulo José
+
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Alonso Veloso
+    given-names: Eveline 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Baroni De Carvalho
+    given-names: Juliana Amaral 
+keywords:
+    - Lazer
+    - Futebol
+    - Marcação
+    - Organização
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti2-1372100-peladin
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2024-06-25
